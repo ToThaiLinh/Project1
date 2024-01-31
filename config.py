@@ -2,8 +2,9 @@ global screen_size
 screen_size = (400, 400)
 screen_color = (255, 255, 255)
 screen_border_color = (79, 124, 186)
-n = 4  # kích thước bảng trò chơi
+n = 4  # kích thước bảng trò chơi để chiến thắng
 dosau = 2
+number_score_to_win = 5
 # board config
 # 0 = ô trống, 1 = x, -1 = o
 

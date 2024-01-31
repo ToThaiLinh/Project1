@@ -35,7 +35,6 @@ def drawO(screen, x, y):
 def new_board(width, height):
     board = [[0 for x in range(width // square_size)] for y in range(height // square_size)]
     return board
-
 #can xem xet
 def display_text(screen, text, coordinate):
     font = p.font.Font(text_font, text_size)

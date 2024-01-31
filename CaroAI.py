@@ -201,7 +201,39 @@ def miniMax(board, valid_Moves, isMaxplayer, depth):
                     nextMove = move
             board[move[0]][move[1]] = 0
         return minScore
-
+'''Hàm miniMax(board, isMax, depth):
+            Nếu độ sâu = 0:
+                Trả về giá trị của bàn cờ hiện tại
+                
+            Nếu tất cả các ô đầy:
+                Trả về 0
+            
+            Nếu người chơi chiến thắng (người chơi là max):
+                Trả về giá trị lớn nhất
+            
+            Nếu máy chiến thắng(máy là min):
+                Trả về giá trị nhỏ nhất
+            
+            Nếu là lượt chơi của máy:
+                Khởi tạo giá trị min vô cùng lớn 
+                Giá trị min = 1e18
+                For các ô trống trong bảng:
+                    Thực hiện đánh dấu ô trống
+                    Tìm các ô trống sau khi đã đi
+                    Giá trị trả về = Đệ quy với bảng đã đánh dấu ô trống
+                    Nếu giá trị trả về nhỏ hơn giá trị min thì thay thế giá trị min
+                Trả về ô trống có giá trị min nhỏ nhất
+            
+            Nếu là lượt chơi của người chơi:
+                Khởi tạo giá trị max vô cùng nhở
+                Giá trị max = -1e18
+                For các ô trống trong bảng:
+                    Thực hiện đánh dấu ô trống
+                    Tìm các ô trống sau khi đã đi
+                    Giá trị trả về = Đệ quy với bẳng đã đánh dấu ô trống
+                    Nếu giá trị trả về lớn hơn giá trị max thì thay thế giá trị max
+                Trả về ô trống có giá trị max lớn nhất
+    '''
 def MiniMax_AlphaBeta(board, valid_Moves, isMaxplayer,alpha, beta, depth):
     global nextMove
     if depth == 0:
